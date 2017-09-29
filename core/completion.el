@@ -39,9 +39,6 @@
 (use-package swiper
   :ensure t)
 
-;; Avy
-(use-package avy
-  :ensure t)
 
 
 ;; Which key
