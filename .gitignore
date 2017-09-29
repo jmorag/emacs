@@ -1,0 +1,8 @@
+# .gitignore for emacs repository
+auto-save-list
+backups
+elpa
+eshell
+straight
+ido*
+*~
