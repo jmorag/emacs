@@ -22,11 +22,21 @@
   :commands magit-status
   )
 
+(use-package evil-magit
+  :ensure t
+  :init
+  (require 'magit)
+  :commands magit-status
+  )
+
 ;; Projectile
 (use-package projectile
   :ensure t
   :init
   (use-package counsel-projectile :ensure t)
+  :commands
+  (counsel-projectile
+   projectile-find-file)
   :config
   (projectile-mode 1)
   (counsel-projectile-on)
