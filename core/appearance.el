@@ -61,5 +61,12 @@
   ;;                         (registers . 5)))
   )
 
+;; (use-package spaceline
+;;   :ensure t
+;;   :config
+;;   (require 'spaceline-config)
+;;   (spaceline-emacs-theme)
+;;   )
+
 
 (provide 'appearance)

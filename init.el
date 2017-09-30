@@ -10,9 +10,11 @@
 (require 'appearance)    ;; Look pretty
 (require 'editor)        ;; Evil and friends
 (require 'completion)    ;; Ivy, company, swiper, counsel, YaSnippet, etc.
+(require 'versioncontrol) ;; Magit and projectile
+(require 'keybindings)   ;; My beautiful, custom keybinds
+(require 'navigation)    ;; Avy and windmove
 (require 'lang-python)   ;; python - trying out Elpy but might switch to anaconda
 (require 'lang-latex)    ;; Latex, provided by AucTex
-(require 'keybindings)   ;; My beautiful, custom keybinds
 
 
 ;; Required when using package.el but not straight.el

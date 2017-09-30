@@ -1,5 +1,5 @@
 *Emacs repository
-* TODO write readme
+* DONE write readme
 * TODO setup git and projectile
 * TODO setup python
-* TODO bind more keys, specifically rebind help so we can use C-hjkl for window movement
+* DONE bind more keys, specifically rebind help so we can use C-hjkl for window movement

@@ -59,7 +59,6 @@
 
 ;; Scroll with "C-<jkud>" in Ivy buffer
 (general-define-key
- ;; :states  '(normal insert emacs)
  :keymaps 'ivy-mode-map
  "C-j"    'ivy-next-line
  "C-k"    'ivy-previous-line
@@ -67,6 +66,14 @@
  "C-u"    'ivy-scroll-down-command 
  "C-d"    'ivy-scroll-up-command 
  "C-f"    'ivy-avy
+ )
+
+;; Select new company completion with "C-<jk>"
+(general-define-key
+ :states  '(insert)
+ :keymaps 'company-mode-map
+ "C-j"    'company-select-next
+ "C-k"    'company-select-previous
  )
 
 ;; Spacemacs-esque leader keys
@@ -92,9 +99,18 @@
  "ff" '(counsel-find-file)
  "fr" '(counsel-recentf)
 
+ ;; "g" bindings, for git
+ "g"  '(:ignore t: :which-key "Magit")
+ "gs" '(magit-status)
+
  ;; Swiper search
  "/"  '(swiper)
+
+ ;; Projectile keybindings
+ "p"  (general-simulate-keys "C-c p" :which-key "Projectile")
  ) 
+
+
 
 
 (provide 'keybindings)
