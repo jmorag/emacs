@@ -3,6 +3,8 @@ auto-save-list
 backups
 elpa
 eshell
+recentf
 straight
 ido*
 *~
+#*#
