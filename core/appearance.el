@@ -55,10 +55,10 @@
   :init (use-package page-break-lines :ensure t)
   :config
   (dashboard-setup-startup-hook)
-  ;; (setq dashboard-items '((recents  . 5)
-  ;;                         (bookmarks . 5)
-  ;;                         (projects . 5)
-  ;;                         (registers . 5)))
+  (setq dashboard-items '((recents  . 5)
+                          (bookmarks . 5)
+                          (projects . 5)
+                          (registers . 5)))
   )
 
 ;; (use-package spaceline
@@ -68,5 +68,6 @@
 ;;   (spaceline-emacs-theme)
 ;;   )
 
+;; TODO: steal doom modeline
 
 (provide 'appearance)

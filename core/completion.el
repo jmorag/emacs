@@ -7,7 +7,6 @@
 ;;   - avy
 ;;   - YaSnippet
 ;;   - company
-;; TODO: Install YaSnippet and company 
 
 
 ;; Ivy (taken from "How to make your own Spacemacs")
