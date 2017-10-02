@@ -6,6 +6,7 @@
 (require 'evil-nerd-commenter)
 (require 'evil-surround)
 (require 'company)
+(require 'yasnippet)
 
 ;; Begin actual keybindings
 
@@ -58,7 +59,6 @@
  "C-l" 'evil-window-right
  )
 
-
 ;; Scroll with "C-<jkud>" in Ivy buffer
 (general-define-key
  :keymaps 'ivy-mode-map
@@ -76,6 +76,13 @@
  :keymaps 'company-active-map
  "C-j"    'company-select-next
  "C-k"    'company-select-previous
+ )
+
+;; Tab and backtab to move through yasnippet fields
+(general-define-key
+ :keymaps    'yas-minor-mode-map
+ "TAB"       'yas-next-field
+ "<backtab>" 'yas-prev-field
  )
 
 ;; Spacemacs-esque leader keys
@@ -98,17 +105,22 @@
  "fr" '(counsel-recentf)
 
  ;; "g" bindings, for git
- "g"  '(:ignore t: :which-key "Magit")
+ "g"  '(:ignore t :which-key "Magit")
  "gs" '(magit-status)
+
+ ;; "p" bindings, for projectile
+ "p" '(projectile-command-map :which-key "Projectile")
+
+ ;; "s" bindings, for snippets
+ "s"  '(:ignore t :which-key "YaSnippet")
+ "sn" '(yas-new-snippet)
+ "sd" '(yas-describe-tables)
+ "sc" '(aya-create)
+ "se" '(aya-expand)
 
  ;; Swiper search
  "/"  '(swiper)
-
- ;; Projectile keybindings
- "p" '(projectile-command-map)
  ) 
-
-
 
 
 (provide 'keybindings)

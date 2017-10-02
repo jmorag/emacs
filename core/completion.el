@@ -33,7 +33,6 @@
    counsel-locate)   ; search for files or else using locate
   )
 
-
 ;; Swiper
 (use-package swiper
   :ensure t
@@ -75,6 +74,15 @@
 (use-package yasnippet-snippets
   :ensure t
   :after yasnipet
+  )
+
+(use-package auto-yasnippet
+  :ensure t
+  :after yasnippet
+  :commands
+  (aya-create
+   aya-expand
+   aya-open-line)
   )
 
 ;; Add yasnippet support for all company backends
