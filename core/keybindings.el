@@ -5,8 +5,7 @@
 (require 'general)
 (require 'evil-nerd-commenter)
 (require 'evil-surround)
-(require 'windmove)
-
+(require 'company)
 
 ;; Begin actual keybindings
 
@@ -53,7 +52,6 @@
 
 ;; Move between widows with "C-<hjkl>"
 (general-define-key
- :keymaps 'global-mode-map
  "C-h" 'evil-window-left
  "C-j" 'evil-window-down
  "C-k" 'evil-window-up
@@ -73,9 +71,9 @@
  )
 
 ;; Select new company completion with "C-<jk>"
+;; (this will allow for no conflicts with TAB in yasnippets)
 (general-define-key
- ;; :states  '(insert)
- :keymaps 'company-mode-map
+ :keymaps 'company-active-map
  "C-j"    'company-select-next
  "C-k"    'company-select-previous
  )
@@ -92,11 +90,7 @@
  "e" '(eval-buffer)
  
  ;; "h" bindings, for help
- "h"  '(:ignore t :which-key "Help")
- "hv" '(counsel-describe-variable)
- "hf" '(counsel-describe-function)
- "hk" '(describe-key)
- "hc" '(describe-key-briefly)
+ "h" '(help-command)
 
  ;; "f" bindings, for files
  "f"  '(:ignore t :which-key "Files")
@@ -111,7 +105,7 @@
  "/"  '(swiper)
 
  ;; Projectile keybindings
- "p"  (general-simulate-keys "C-c p" :which-key "Projectile")
+ "p" '(projectile-command-map)
  ) 
 
 

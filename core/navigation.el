@@ -1,16 +1,6 @@
-;; Navigation commands
+;; Navigation 
 
-;; For moving windows "normally," i.e. with "C-<hjkl>"
-(use-package windmove
-  :ensure t
-  :commands
-  (windmove-left
-   windmove-right
-   windmove-up
-   windmove-down)
-  )
-
-;; Avy
+;; Avy - for jumping gracefully around buffers
 (use-package avy
   :ensure t
   :commands
