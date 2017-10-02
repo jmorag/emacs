@@ -52,10 +52,14 @@
 (mmap "_" 'evilnc-comment-or-uncomment-paragraphs)
 
 ;; Move between widows with "C-<hjkl>"
-(nmap "C-h" 'windmove-left)
-(nmap "C-j" 'windmove-down)
-(nmap "C-k" 'windmove-up)
-(nmap "C-l" 'windmove-right)
+(general-define-key
+ :keymaps 'global-mode-map
+ "C-h" 'evil-window-left
+ "C-j" 'evil-window-down
+ "C-k" 'evil-window-up
+ "C-l" 'evil-window-right
+ )
+
 
 ;; Scroll with "C-<jkud>" in Ivy buffer
 (general-define-key
@@ -70,7 +74,7 @@
 
 ;; Select new company completion with "C-<jk>"
 (general-define-key
- :states  '(insert)
+ ;; :states  '(insert)
  :keymaps 'company-mode-map
  "C-j"    'company-select-next
  "C-k"    'company-select-previous

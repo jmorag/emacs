@@ -12,6 +12,22 @@
 
 (use-package latex-preview-pane
   :ensure t
+  :after auctex
+  :config
+  (latex-preview-pane-enable)
+  )
+
+;; local configuration for TeX modes
+(defun my-latex-mode-setup ()
+  (setq-local company-backends
+              (append '((company-math-symbols-latex company-latex-commands))
+                      company-backends)))
+
+(use-package company-math
+  :ensure t
+  :after company
+  :config
+  (my-latex-mode-setup)
   )
 
 (provide 'lang-latex)

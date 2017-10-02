@@ -33,6 +33,7 @@
    counsel-locate)   ; search for files or else using locate
   )
 
+
 ;; Swiper
 (use-package swiper
   :ensure t
@@ -52,24 +53,27 @@
   :diminish which-key-mode
   )
 
+;; Company
+(use-package company
+  :ensure t
+  :config
+  (global-company-mode 1)
+  ;; Configure YouCompleteMe-esque behavior
+  (add-to-list 'company-frontends 'company-tng-frontend)
+  )
+
 ;; YaSnippet
 (use-package yasnippet
   :ensure t
+  :after company
   :config
   (yas-global-mode 1)
   )
 
 (use-package yasnippet-snippets
   :ensure t
-  :init
-  (require 'yasnippet)
+  :after yasnipet
   )
 
-;; Company
-(use-package company
-  :ensure t
-  :config
-  (global-company-mode 1)
-  )
 
 (provide 'completion)

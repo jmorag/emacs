@@ -67,6 +67,14 @@
   (global-evil-surround-mode 1)
   )
 
+;; Fix the path so it can access everything that the shell can
+(use-package exec-path-from-shell
+  :ensure t
+  :config
+  (when (memq window-system '(mac ns x))
+    (exec-path-from-shell-initialize))
+  )
+
 
 
 
