@@ -1,3 +1,6 @@
+NOTE:
+This is no longer my emacs config that I work from. The current one lives [[https://github.com/jmorag/.emacs.d][here]].
+
 *Emacs repository
 * DONE write readme
 * TODO setup git and projectile
